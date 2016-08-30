@@ -2,7 +2,11 @@ import {Component} from '@angular/core';
 
 @Component({
   selector   : 'app',
-  templateUrl: `<h1>Hello Angular</h1>`,
+  templateUrl: `
+    <navbar></navbar>
+    <!--<loader></loader>-->
+    <router-outlet></router-outlet>
+  `,
 })
 
 export class AppComponent {}
