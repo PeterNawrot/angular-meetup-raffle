@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {RaffleStore} from "../raffle-logic/raffle.store";
 
 @Component({
   selector: 'raffle',
@@ -6,7 +7,7 @@ import {Component} from "@angular/core";
     <div class="container">
     
       <div class="col-md-6">
-        <list-group title="Members"></list-group>
+        <list-group title="Members" [items]="_store.state.members"></list-group>
       </div>
       
       <div class="col-md-6">
@@ -19,4 +20,12 @@ import {Component} from "@angular/core";
   `
 })
 
-export class RaffleComponent {}
+export class RaffleComponent {
+
+  private _store: RaffleStore;
+
+  constructor(store: RaffleStore) {
+    this._store = store;
+  }
+
+}

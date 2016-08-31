@@ -1,28 +1,26 @@
-import { Component } from '@angular/core';
+import {Component, Output, EventEmitter} from "@angular/core";
 
 @Component({
-    selector: 'list-group',
-    inputs: ['title'],
-    template: `
+  selector: 'list-group',
+  inputs  : ['title', 'items'],
+  template: `
       <h2 class="page-header">{{ title }}</h2>
       <div class="list-group">
-      
-        <a href="#" class="list-group-item active">
-          <h4 class="list-group-item-heading">List group item heading</h4>     
-        </a>
-        
-        <a href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">List group item heading</h4>     
+              
+        <a *ngFor="let item of items" (click)="itemClicked.emit(item)" class="list-group-item">
+          <h4 class="list-group-item-heading">{{item.name || item.member.name}}</h4>     
         </a>
         
       </div>
      `
 })
 
-export class ListGroupComponent  {
+export class ListGroupComponent {
 
-    constructor() {
-        console.log('list group component');
-    }
+  @Output() itemClicked:EventEmitter<any>;
+
+  constructor() {
+    this.itemClicked = new EventEmitter();
+  }
 
 }

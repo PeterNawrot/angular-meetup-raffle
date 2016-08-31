@@ -1,11 +1,12 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector   : 'loader',
+  selector : 'loader',
   styleUrls: ['./loader.component.css'],
-  template: `
+  template : `
     <div class="loader">Loading...</div>
   `
 })
 
-export class LoaderComponent {}
+export class LoaderComponent {
+}
