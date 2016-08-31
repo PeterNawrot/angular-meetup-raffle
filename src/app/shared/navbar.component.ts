@@ -3,11 +3,12 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'navbar',
   template: `
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">MEETUP RAFFLE</a>
+          <a class="navbar-brand">MEETUP RAFFLE</a>         
         </div>
+        <span class="navbar-text navbar-right">LOGOUT</span>        
       </div>
     </nav>
     `
