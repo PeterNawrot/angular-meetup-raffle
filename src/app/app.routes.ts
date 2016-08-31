@@ -4,7 +4,7 @@ import {LoginComponent} from "./login/login.component";
 import {RaffleComponent} from "./raffle/raffle.component";
 
 export const ROUTES:Routes = [
-  {path: '', redirectTo:'dashboard', terminal: true},
+  {path: '', redirectTo: 'dashboard', terminal: true},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'raffle', component: RaffleComponent},
   {path: 'login', component: LoginComponent},

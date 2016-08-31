@@ -4,11 +4,11 @@ require("bootstrap-webpack");
 
 
 // Angular 2
-import '@angular/platform-browser-dynamic';
-import '@angular/platform-browser';
-import '@angular/core';
-import '@angular/http';
-import '@angular/router';
+import "@angular/platform-browser-dynamic";
+import "@angular/platform-browser";
+import "@angular/core";
+import "@angular/http";
+import "@angular/router";
 
 
 // RxJS 5
