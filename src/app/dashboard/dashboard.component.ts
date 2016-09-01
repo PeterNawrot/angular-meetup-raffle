@@ -8,11 +8,15 @@ import {Router} from "@angular/router";
   template: `
     <div class="container" *ngIf="!_store.state.pending">      
       <div class="col-md-6">
-        <list-group title="Groups" [items]="_store.state.groups" (itemClicked)="_actions.getEvents($event)"></list-group>        
+        <list-group title="Groups" 
+                    [items]="_store.state.groups" 
+                    (itemClicked)="_actions.getEvents($event)"></list-group>        
       </div>
       
       <div class="col-md-6">
-        <list-group title="Events" [items]="_store.state.events" (itemClicked)="_actions.getMembers($event)"></list-group>
+        <list-group title="Events" 
+                    [items]="_store.state.events" 
+                    (itemClicked)="_actions.getMembers($event)"></list-group>
       </div>      
     </div>
    `

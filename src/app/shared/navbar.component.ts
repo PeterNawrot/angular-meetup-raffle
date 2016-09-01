@@ -7,8 +7,7 @@ import {Component} from "@angular/core";
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand">MEETUP RAFFLE</a>         
-        </div>
-        <span class="navbar-text navbar-right">LOGOUT</span>        
+        </div>                
       </div>
     </nav>
     `

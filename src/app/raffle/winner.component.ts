@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {RaffleStore} from "../raffle-logic/raffle.store";
 
 @Component({
   selector: 'winner',

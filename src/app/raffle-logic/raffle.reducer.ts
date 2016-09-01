@@ -17,6 +17,7 @@ export class RaffleReducer {
   static reduce(state = RaffleAppState, action) {
 
     switch (action.type) {
+
       case RaffleActions.PENDING_FOR_DATA:
         return Object.assign({}, state, { pending: true });
 
@@ -24,17 +25,16 @@ export class RaffleReducer {
         return Object.assign({}, state, { user: action.payload, pending: false });
 
       case RaffleActions.SET_GROUPS:
-        return Object.assign({}, state, { groups: action.payload, pending: false  });
+        return Object.assign({}, state, { groups: action.payload, pending: false });
 
       case RaffleActions.SET_EVENTS:
-        return Object.assign({}, state, { events: action.payload, pending: false  });
+        return Object.assign({}, state, { events: action.payload, pending: false });
 
       case RaffleActions.SET_MEMBERS:
-        console.log(action.payload);
-        return Object.assign({}, state, { members: action.payload, pending: false  });
+        return Object.assign({}, state, { members: action.payload, pending: false });
 
       case RaffleActions.SET_WINNER:
-        break;
+        return Object.assign({}, state, { winner: action.payload, pending: false });
 
       default:
         return state;

@@ -39,7 +39,7 @@ export class MeetupApi {
         break;
 
       case RaffleActions.GET_WINNER:
-        console.log(`get winner!`);
+        this.getWinner(store.getState().members, next);
         break;
 
       default:
@@ -49,7 +49,6 @@ export class MeetupApi {
     next({type: RaffleActions.PENDING_FOR_DATA})
 
   };
-
 
   private getUser(key, next) {
     let params:URLSearchParams = new URLSearchParams();
@@ -87,12 +86,12 @@ export class MeetupApi {
   }
 
   private getEvents(apiKey, groupId, next) {
-
     let params:URLSearchParams = new URLSearchParams();
 
     params.set('key', apiKey);
     params.set('group_id', groupId);
     params.set('only', 'id,name');
+    params.set('status', 'upcoming,past');
 
 
     this.http.get(`${this.BASE_URL}events`, {search: params})
@@ -104,14 +103,11 @@ export class MeetupApi {
   }
 
   private getMembers(apiKey, eventId, next) {
-    debugger;
     let params:URLSearchParams = new URLSearchParams();
 
     params.set('key', apiKey);
     params.set('event_id', eventId);
     params.set('rsvp', 'yes');
-    // params.set('only', 'id,name');
-
 
     this.http.get(`${this.BASE_URL}rsvps`, {search: params})
         .map(result => result.json())
@@ -121,5 +117,26 @@ export class MeetupApi {
         }));
   }
 
+  private getWinner(members, next){
+      let counter = 0;
+
+      let stop = setInterval( () => {
+
+        next({
+          type: RaffleActions.SET_WINNER,
+          payload: members[counter].member.name
+        });
+
+        counter += 1;
+
+        if (counter >= members.length) {
+          counter = 0;
+        }
+      }, 100);
+
+    //noinspection TypeScriptUnresolvedFunction
+    setTimeout( () => clearInterval(stop), Math.floor(Math.random()*13652));
+
+  }
 
 }

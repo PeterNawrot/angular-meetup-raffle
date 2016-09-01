@@ -65,7 +65,7 @@ export class RaffleActions {
   /**
    * choose a random member as a winner
    */
-  selectWinner() {
+  getWinner() {
     this.store.dispatch({
       type: RaffleActions.GET_WINNER,
     })

@@ -14,7 +14,8 @@ import {RaffleStore} from "../raffle-logic/raffle.store";
         
         <h2 class="page-header">Choose a winner</h2>
         <raffle-buttons class="pull-right"></raffle-buttons>
-        <winner name="Nir Kaufman"></winner>                
+        
+        <winner [name]="_store.state.winner"></winner>                
         </div>
       </div>          
   `
