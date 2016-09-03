@@ -49,6 +49,7 @@
     "@angular/platform-browser-dynamic": "2.0.0-rc.5",
     "@angular/platform-server": "2.0.0-rc.5",
     "@angular/router": "3.0.0-rc.1",
+    "bdsmjs": "^0.3.2",
     "core-js": "^2.2.0",
     "ie-shim": "^0.1.0",
     "jquery": "^3.1.0",

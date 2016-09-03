@@ -5,7 +5,7 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'dashboard',
-  template: `
+  template: `    
     <div class="container" *ngIf="!_store.state.pending">      
       <div class="col-md-6">
         <list-group title="Groups" 
@@ -45,4 +45,3 @@ export class DashboardComponent implements OnInit {
 
   }
 }
-

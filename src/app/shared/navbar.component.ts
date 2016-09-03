@@ -6,7 +6,7 @@ import {Component} from "@angular/core";
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand">MEETUP RAFFLE</a>         
+          <!--<a [routerLink]="['/login']" class="navbar-brand">MEETUP RAFFLE</a>         -->
         </div>                
       </div>
     </nav>

@@ -92,6 +92,7 @@ export class MeetupApi {
     params.set('group_id', groupId);
     params.set('only', 'id,name');
     params.set('status', 'upcoming,past');
+    params.set('sign', 'true');
 
 
     this.http.get(`${this.BASE_URL}events`, {search: params})
@@ -108,6 +109,7 @@ export class MeetupApi {
     params.set('key', apiKey);
     params.set('event_id', eventId);
     params.set('rsvp', 'yes');
+    params.set('sign', 'true');
 
     this.http.get(`${this.BASE_URL}rsvps`, {search: params})
         .map(result => result.json())
