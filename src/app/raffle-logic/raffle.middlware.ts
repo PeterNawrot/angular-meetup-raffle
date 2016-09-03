@@ -12,7 +12,8 @@ export class MeetupApi {
   constructor(_http:Http) {
     this.http     = _http;
     this.API_KRY  = '';
-    this.BASE_URL = 'https://cors-anywhere.herokuapp.com/https://api.meetup.com/2/';
+    this.BASE_URL = 'https://api.meetup.com/2/';
+    // this.BASE_URL = 'https://cors-anywhere.herokuapp.com/https://api.meetup.com/2/';
   }
 
   public middleware = store => next => action => {
@@ -53,10 +54,10 @@ export class MeetupApi {
   private getUser(key, next) {
     let params:URLSearchParams = new URLSearchParams();
 
-    params.set('member_id', 'self');
-    params.set('key', key);
-    params.set('only', 'id,name');
-    params.set('sign', 'true');
+    // params.set('member_id', 'self');
+    // params.set('key', key);
+    // params.set('only', 'id,name');
+    // params.set('sign', 'true');
 
     this.http.get(`${this.BASE_URL}members`, {search: params})
         .map(result => result.json())
