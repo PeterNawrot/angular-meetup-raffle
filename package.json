@@ -8,12 +8,9 @@
     "build": "webpack --inline --colors --progress --display-error-details --display-cached",
     "watch": "npm run build -- --watch",
     "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
+    "mock": "json-server meetup-mock.json --port 3001 -d 1000",
     "start": "npm run server"
   },
-  "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
-  ],
   "license": "MIT",
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
@@ -39,23 +36,22 @@
     "webpack-merge": "^0.8.4"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.5",
-    "@angular/compiler": "2.0.0-rc.5",
-    "@angular/compiler-cli": "0.5.0",
-    "@angular/core": "2.0.0-rc.5",
-    "@angular/forms": "0.3.0",
-    "@angular/http": "2.0.0-rc.5",
-    "@angular/platform-browser": "2.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
-    "@angular/platform-server": "2.0.0-rc.5",
-    "@angular/router": "3.0.0-rc.1",
+    "@angular/common": "2.0.0-rc.6",
+    "@angular/compiler": "2.0.0-rc.6",
+    "@angular/core": "2.0.0-rc.6",
+    "@angular/forms": "2.0.0-rc.6",
+    "@angular/http": "2.0.0-rc.6",
+    "@angular/platform-browser": "2.0.0-rc.6",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.6",
+    "@angular/platform-server": "2.0.0-rc.6",
+    "@angular/router": "3.0.0-rc.2",
     "core-js": "^2.2.0",
     "ie-shim": "^0.1.0",
     "jquery": "^3.1.0",
-    "redux": "^3.5.2",
-    "rxjs": "5.0.0-beta.6",
-    "typescript": "^1.9.0-dev",
-    "zone.js": "~0.6.12"
+    "rxjs": "5.0.0-beta.11",
+    "zone.js": "0.6.17",
+    "redux": "3.5.2",
+    "typescript": "~1.9.0-dev"
   },
   "keywords": [
     "Angular2",

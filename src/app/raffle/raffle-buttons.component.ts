@@ -10,7 +10,7 @@ import {RaffleActions} from "../raffle-logic/raffle.actions";
 
 export class RaffleButtonsComponent {
 
-  private _actions: RaffleActions
+  private _actions: RaffleActions;
 
   constructor(actions: RaffleActions) {
       this._actions = actions;

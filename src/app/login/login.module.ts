@@ -8,6 +8,4 @@ import {BrowserModule} from "@angular/platform-browser";
   exports     : [LoginComponent]
 })
 
-
-export class LoginModule {
-}
+export class LoginModule {}

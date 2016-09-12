@@ -7,7 +7,7 @@ import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [LoaderComponent, NavbarComponent, ListGroupComponent],
-  imports: [BrowserModule, RouterModule],
+  imports     : [BrowserModule, RouterModule],
   exports     : [NavbarComponent, LoaderComponent, ListGroupComponent]
 })
 

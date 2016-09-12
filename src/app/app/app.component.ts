@@ -7,9 +7,9 @@ import {RaffleStore} from "../raffle-logic/raffle.store";
     <navbar></navbar>
     <loader *ngIf="_store.state.pending"></loader>
     <router-outlet></router-outlet>
-  `,
+    `,
 })
 
 export class AppComponent {
-  constructor(private _store: RaffleStore) {}
+  constructor(private _store:RaffleStore) {}
 }

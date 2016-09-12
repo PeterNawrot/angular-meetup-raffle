@@ -8,8 +8,13 @@ import {MeetupApi} from "./raffle.middlware";
 
 
 @NgModule({
-  providers:[RaffleStore, RaffleReducer, RaffleActions, CanActivateRoute, MeetupApi]
+  providers:[
+      RaffleStore,
+      RaffleReducer,
+      RaffleActions,
+      CanActivateRoute,
+      MeetupApi
+  ]
 })
-
 
 export class RaffleProviders {}

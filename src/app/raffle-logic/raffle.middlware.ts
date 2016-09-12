@@ -12,8 +12,8 @@ export class MeetupApi {
   constructor(_http:Http) {
     this.http     = _http;
     this.API_KRY  = '';
-    this.BASE_URL = 'https://api.meetup.com/2/';
-    // this.BASE_URL = 'https://cors-anywhere.herokuapp.com/https://api.meetup.com/2/';
+    // this.BASE_URL = 'http://localhost:3001/';
+    this.BASE_URL = 'https://crossorigin.me/https://api.meetup.com/2/';
   }
 
   public middleware = store => next => action => {
@@ -47,25 +47,24 @@ export class MeetupApi {
         next(action)
     }
 
-    next({type: RaffleActions.PENDING_FOR_DATA})
-
+    next({type: RaffleActions.PENDING_FOR_DATA});
   };
 
   private getUser(key, next) {
-    let params:URLSearchParams = new URLSearchParams();
 
-    // params.set('member_id', 'self');
-    // params.set('key', key);
-    // params.set('only', 'id,name');
-    // params.set('sign', 'true');
+    let search:URLSearchParams = new URLSearchParams();
 
-    this.http.get(`${this.BASE_URL}members`, {search: params})
-        .map(result => result.json())
+    search.set('member_id', 'self');
+    search.set('key', key);
+    search.set('only', 'id,name');
+    search.set('sign', 'true');
+
+
+    this.http.get(`${this.BASE_URL}members`, {search})
         .subscribe((users:any) => next({
           type   : RaffleActions.SET_USER,
-          payload: {user: users.results[0], key: key}
+          payload: {user: users.json().results[0], key: key}
         }));
-
   }
 
   private getGroups(apiKey, userId, next) {
@@ -79,10 +78,9 @@ export class MeetupApi {
     params.set('sign', 'true');
 
     this.http.get(`${this.BASE_URL}groups`, {search: params})
-        .map(result => result.json())
         .subscribe((groups:any) => next({
           type   : RaffleActions.SET_GROUPS,
-          payload: groups.results
+          payload: groups.json().results
         }));
   }
 
@@ -97,10 +95,9 @@ export class MeetupApi {
 
 
     this.http.get(`${this.BASE_URL}events`, {search: params})
-        .map(result => result.json())
         .subscribe((events:any) => next({
           type   : RaffleActions.SET_EVENTS,
-          payload: events.results
+          payload: events.json().results
         }));
   }
 
@@ -113,33 +110,31 @@ export class MeetupApi {
     params.set('sign', 'true');
 
     this.http.get(`${this.BASE_URL}rsvps`, {search: params})
-        .map(result => result.json())
         .subscribe((members:any) => next({
-          type: RaffleActions.SET_MEMBERS,
-          payload: members.results
+          type   : RaffleActions.SET_MEMBERS,
+          payload: members.json().results
         }));
   }
 
-  private getWinner(members, next){
-      let counter = 0;
+  private getWinner(members, next) {
+    let counter = 0;
 
-      let stop = setInterval( () => {
+    let stop = setInterval(() => {
 
-        next({
-          type: RaffleActions.SET_WINNER,
-          payload: members[counter].member.name
-        });
+      next({
+        type   : RaffleActions.SET_WINNER,
+        payload: members[counter].member.name
+      });
 
-        counter += 1;
+      counter += 1;
 
-        if (counter >= members.length) {
-          counter = 0;
-        }
-      }, 100);
+      if (counter >= members.length) {
+        counter = 0;
+      }
+    }, 100);
 
     //noinspection TypeScriptUnresolvedFunction
-    setTimeout( () => clearInterval(stop), Math.floor(Math.random()*13652));
+    setTimeout(() => clearInterval(stop), Math.floor(Math.random() * 13652));
 
   }
-
 }

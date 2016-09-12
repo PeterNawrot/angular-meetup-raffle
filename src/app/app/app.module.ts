@@ -11,7 +11,6 @@ import {SharedComponentsModule} from "../shared/components.module";
 import {LoginModule} from "../login/login.module";
 import {RaffleProviders} from '../raffle-logic/raffle-providers.module';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports     : [
@@ -29,5 +28,3 @@ import {RaffleProviders} from '../raffle-logic/raffle-providers.module';
 })
 
 export class AppModule {}
-
-

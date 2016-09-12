@@ -1,0 +1,50 @@
+{
+  "members": {
+    "results": [
+      {
+        "name": "Nir Kaufman",
+        "id": 102603502
+      }
+    ]
+  },
+
+  "groups": {
+    "results": [
+      {
+        "name": "Angular After Hours",
+        "id": 19977029
+      },
+      {
+        "name": "FRONT & BAND",
+        "id": 20121688
+      }
+    ]
+  },
+
+  "events": {
+    "results": [
+      {
+        "name": "#1 - Up & Running!",
+        "id": "231471133"
+      },
+      {
+        "name": "#2 - Angular2 Beginners Workshop",
+        "id": "231694917"
+      },
+      {
+        "name": "#3 Angular2 Beginners Workshop",
+        "id": "232558099"
+      },
+      {
+        "name": "#4 Hands On! - Become The Pipe Master",
+        "id": "232687733"
+      },
+      {
+        "name": "#5 Angular 2 Beginners-Plus Workshop",
+        "id": "233516430"
+      }
+    ]
+  },
+
+  "rsvps": {}
+}

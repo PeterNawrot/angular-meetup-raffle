@@ -17,14 +17,8 @@ export class RaffleActions {
   static SET_MEMBERS      = 'SET_MEMBERS';
   static SET_WINNER       = 'SET_WINNER';
 
-  constructor(private store:RaffleStore) {
-  }
+  constructor(private store:RaffleStore) {}
 
-  /**
-   * fetch all the groups associated with
-   * this apiKey
-   * @param apiKey
-   */
   getUser(apiKey) {
     this.store.dispatch({
       type   : RaffleActions.GET_USER,
@@ -38,11 +32,6 @@ export class RaffleActions {
     })
   }
 
-  /**
-   * fetch all the events associated
-   * with this groupId
-   * @param group
-   */
   getEvents(group) {
     this.store.dispatch({
       type   : RaffleActions.GET_EVENTS,
@@ -50,11 +39,6 @@ export class RaffleActions {
     })
   }
 
-  /**
-   * fetch all the members RSVP's
-   * to this eventId
-   * @param event
-   */
   getMembers(event) {
     this.store.dispatch({
       type   : RaffleActions.GET_MEMBERS,
@@ -62,9 +46,6 @@ export class RaffleActions {
     })
   }
 
-  /**
-   * choose a random member as a winner
-   */
   getWinner() {
     this.store.dispatch({
       type: RaffleActions.GET_WINNER,

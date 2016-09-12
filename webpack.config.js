@@ -30,6 +30,7 @@ var webpackConfig = {
         loaders: ['awesome-typescript-loader', 'angular2-template-loader']
       },
       {test: /\.css$/, loaders: ['to-string-loader', 'css-loader']},
+      {test: /\.json$/, loader: 'json'},
       {test: /\.html$/, loader: 'raw-loader'},
       {
         test  : /\.(woff|woff2)$/,

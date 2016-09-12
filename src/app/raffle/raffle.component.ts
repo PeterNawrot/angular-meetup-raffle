@@ -28,5 +28,4 @@ export class RaffleComponent {
   constructor(store: RaffleStore) {
     this._store = store;
   }
-
 }

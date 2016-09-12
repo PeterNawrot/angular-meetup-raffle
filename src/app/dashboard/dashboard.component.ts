@@ -42,6 +42,5 @@ export class DashboardComponent implements OnInit {
         this._router.navigate(['/raffle'])
       }
     })
-
   }
 }

@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
 @Component({
   selector   : 'login',
   styles     : ['input {height: 60px; font-size: 30px}'],
-  templateUrl: `    
+  templateUrl: `       
     <div class="container" *ngIf="!_store.state.pending">
         <div class="col-md-4 col-md-offset-4">
           <input type="text"
