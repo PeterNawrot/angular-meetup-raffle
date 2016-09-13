@@ -12,3 +12,4 @@ A simple starter project for demonstrating the basic concepts of Angular 2.
 - `WINDOWS ONLY` run `npm run typings-install` to install typings
 - Run `npm start` to fire up dev server
 - Open browser to [`http://localhost:3000`](http://localhost:3000)
+\
