@@ -48,10 +48,10 @@
     "core-js": "^2.2.0",
     "ie-shim": "^0.1.0",
     "jquery": "^3.1.0",
-    "rxjs": "5.0.0-beta.11",
-    "zone.js": "0.6.17",
     "redux": "3.5.2",
-    "typescript": "~1.9.0-dev"
+    "rxjs": "5.0.0-beta.11",
+    "typescript": "~1.9.0-dev",
+    "zone.js": "0.6.17"
   },
   "keywords": [
     "Angular2",

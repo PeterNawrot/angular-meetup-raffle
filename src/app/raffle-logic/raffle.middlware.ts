@@ -13,7 +13,7 @@ export class MeetupApi {
     this.http     = _http;
     this.API_KRY  = '';
     // this.BASE_URL = 'http://localhost:3001/';
-    this.BASE_URL = 'https://crossorigin.me/https://api.meetup.com/2/';
+    // this.BASE_URL = 'https://crossorigin.me/https://api.meetup.com/2/';
   }
 
   public middleware = store => next => action => {
