@@ -10,10 +10,6 @@
     "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
     "start": "npm run server"
   },
-  "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
-  ],
   "license": "MIT",
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
