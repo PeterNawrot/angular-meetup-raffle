@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
         <div class="col-md-4 col-md-offset-4">
           <input type="text"
                  #apiKey
-                 value="655742536f5b50716ce185634761065"
+                 value="663871136d197c5f767136643e53743c"
                  class="form-control input-lg"                 
                  placeholder="Your API key..."
                  (keydown.enter)="_actions.getUser(apiKey.value)"
